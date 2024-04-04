@@ -12,6 +12,7 @@
             padding: 0;
             margin: 0;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
         }
 
         .heading {
@@ -32,9 +33,14 @@
         }
 
         .intro-text {
-            font-size: 54px;
-            max-width: 400px;
+            font-size: 124px;
+            max-width: 500px;
             font-weight: 600;
+        }
+
+        .intro-subtext {
+            font-size: 54px;
+            font-weight: 300;
         }
 
         .intro-text-container {
@@ -68,6 +74,12 @@
             opacity: ;
             font-family: serif;
         } */
+
+        /* section --  about aditi -- start */
+        .about-aditi-main-container {
+            overflow-x: hidden;
+        }
+
         .aditi-img::before {
             position: absolute;
             content: '';
@@ -85,38 +97,167 @@
             font-size: 18px;
             max-width: 400px;
         }
+
+        .yogo-logo {
+            width: 200px;
+        }
+
+        /* SCROLL DOWN BUTTON START */
+        #scroll-down-animation {
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h2 {
+            color: #fff;
+            font-family: 'Roboto', 'Arial', sans-serif;
+            font-weight: 200;
+            font-size: 16px;
+            padding-top: 10px;
+        }
+
+        .mouse {
+            margin: 0 auto;
+            display: block;
+            border-radius: 50px;
+            border: 2px solid #fff;
+            height: 68px;
+            width: 36px;
+            position: relative;
+        }
+
+        .move {
+            position: absolute;
+            background-color: #fff;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: move 2s linear infinite;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(-50%, 10px);
+                opacity: 0;
+            }
+
+            50% {
+                transform: translate(-50%, 30px);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-50%, 60px);
+                opacity: 0;
+            }
+        }
+
+        /* SCROLL DOWN BUTTON END */
+
+        /* MEDIA QUERIES */
+        @media (max-width: 576px) {
+
+            .aditi-img::before {
+                position: absolute;
+                content: '';
+                width: 100vw;
+                left: 0;
+                top: 0;
+                height: 100%;
+                background: url('./assets/about_aditi.jpeg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .intro-text {
+                font-size: 96px;
+            }
+
+            .intro-subtext {
+                font-size: 34px;
+            }
+
+            .intro-desc {
+                font-size: 18px;
+                max-width: 270px;
+            }
+
+            .yogo-logo {
+                width: 120px;
+                padding-top: 50px;
+            }
+        }
+
+        @media (max-width: 768px) {}
+
+        @media (max-width: 992px) {}
+
+        @media (max-width: 1200px) {}
+
+        @media (max-width: 1400px) {}
     </style>
 </head>
 
 <body>
-    <section id="intro" class="intro-container">
 
-        <img src="./assets/aditi_yoga.jpeg" alt="" srcset="" class="intro-img">
-
-        <div class="intro-text-container">
-            <div class="">
-                <h1 class="intro-text">Online <span class="yoga">Yoga</span> Session With an Expert</h1>
-                <p class="intro-desc">
-                    For the 1st time, we are delighted to organize a Yoga workshop for our clients. <br><a href=""
-                        class="intro-click-here">Click
-                        here</a> to
-                    know
-                    the details :
-                </p>
-
+    <!-- Hero -->
+    <section class="text-center bg-image rounded-3 min-vh-100" style="
+        background-image: url('/assets/aditi_yoga.jpeg');
+        background-repeat: no-repeat;
+        background-position: center;
+        height:400px;
+      ">
+        <div class="mask h-100" style="background-color: rgba(0, 0, 0, 0.65);">
+            <div class="d-flex justify-content-center align-items-center pb-5 h-100">
+                <div class="text-white">
+                    <span class="intro-subtext">Online </span><br><strong class="intro-text">Yoga</strong><br><span
+                        class="intro-subtext">
+                        Session With an
+                        Expert</span>
+                    <!-- <p class="intro-desc mx-auto">
+                        For the 1st time, we are delighted to organize a Yoga workshop for our clients. <br><a href=""
+                            class="intro-click-here">Click
+                            here</a> to
+                        know
+                        the details :
+                    </p> -->
+                </div>
             </div>
         </div>
+        <div id="scroll-down-animation">
+            <span class="mouse">
+                <span class="move"></span>
+            </span>
+            <h2>Scroll down</h2>
+        </div>
     </section>
-    <section id="about-aditi" class="container ">
-        <div class="row">
-            <div class="col py-5">
-                <h1 class="heading pb-4">About Aditi</h1>
-                <p class="about-desc">Aditi has been our success story herself and has 12 years of experience. She is
-                    trained at Abhinam Yoga Institute in India.
-                    She is running her own practice under "Yog with Aditi".</p>
-            </div>
-            <div class="col min-vh-100  aditi-img position-relative">
+    <!-- Hero -->
+    <section id="about-aditi" class="about-aditi-main-container">
+        <div class="container">
 
+            <div class="row">
+                <div class="col-sm py-5 d-flex flex-column justify-content-between align-items-start ">
+
+                    <div>
+                        <h1 class="heading pb-4">About Aditi</h1>
+                        <p class="about-desc">Aditi has been our success story herself and has 12 years of experience.
+                            She
+                            is
+                            trained at Abhinam Yoga Institute in India.
+                            She is running her own practice under "Yog with Aditi".</p>
+                    </div>
+                    <div>
+                        <img src="assets/logo.png" alt="" srcset="" class="yogo-logo">
+                    </div>
+                </div>
+                <div class="col-sm min-vh-100  aditi-img position-relative ">
+
+                </div>
             </div>
         </div>
 
